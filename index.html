@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +7,20 @@
   <title>Picture This!</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
-
+    <picture>
+      <!-- Landscape Image -->
+      <source media="(max-width: 959px)" srcset="images/museum-960_x_540.png 1x, images/museum-1920_x_1080.png 2x, images/museum-2880_x_1621.png 3x">
+      
+      <!-- Square Image -->
+      <source media="(min-width: 960px)" srcset="images/square_480.jpg 1x, images/square_960.jpg 2x, images/square_1440.jpg 3x">
+      <img src="images/square_480.jpg" alt="placeholder">
+    </picture>
   </header>
 </body>
-
 </html>
